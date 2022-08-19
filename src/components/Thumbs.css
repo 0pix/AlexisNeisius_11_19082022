@@ -1,0 +1,42 @@
+.Thumbs {
+  width: 100%;
+  /* max-width: 250px; */
+  height: 250px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.Thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Thumbs h3 {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 10px 10px;
+}
+
+.Thumbs-black {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0.3;
+}

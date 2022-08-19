@@ -5,6 +5,7 @@
   border-radius: 10px;
   overflow: hidden;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .ImageContainer img {
@@ -23,7 +24,7 @@
   padding: 20px;
 }
 
-h2 {
+.ImageContainer h2 {
   font-weight: 500;
   font-size: 1.2em;
 }

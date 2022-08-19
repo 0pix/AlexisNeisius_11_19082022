@@ -6,12 +6,12 @@ header {
   /* background-color: rgb(93, 93, 206); */
 }
 
-ul {
+header ul {
   display: flex;
   list-style: none;
 }
 
-a {
+header a {
   color: #ff6060;
   text-transform: uppercase;
   margin-left: 10px;

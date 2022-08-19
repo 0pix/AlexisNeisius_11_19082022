@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/">
           <Home data={data} />
         </Route>
-        <Route path="/apropos">
+        <Route path="/apropos/:questionNumber">
           <About />
         </Route>
       </Switch>

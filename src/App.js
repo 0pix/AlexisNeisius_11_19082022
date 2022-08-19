@@ -24,15 +24,17 @@ function App() {
 
   return (
     <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home data={data} />
-        </Route>
-        <Route path="/apropos/:questionNumber">
-          <About />
-        </Route>
-      </Switch>
+      <div className="app">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home data={data} />
+          </Route>
+          <Route path="/apropos/:questionNumber">
+            <About />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   )
 }

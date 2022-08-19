@@ -1,0 +1,19 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgb(93, 93, 206); */
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  color: #ff6060;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-weight: 500;
+}

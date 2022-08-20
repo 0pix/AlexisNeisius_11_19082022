@@ -3,7 +3,7 @@ import './Thumbs.css'
 // str = str.replace(/\s+/g, '');
 const Thumbs = ({ image, title, id }) => {
   return (
-    <Link to={`/apropos/${id}`} className="Thumbs">
+    <Link to={`/housingsheet/${id}`} className="Thumbs">
       <h3>{title}</h3>
       <div className="Thumbs-black"></div>
       <img src={image} alt={title} />

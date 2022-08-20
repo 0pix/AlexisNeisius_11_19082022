@@ -4,22 +4,14 @@ import About from './roots/about/About'
 import './App.css'
 import { useState, useEffect } from 'react'
 import Header from './components/Header'
+import HousingSheet from './roots/housingSheet/HousingSheet'
+import fetchData from './helps/fetchData'
 
 function App() {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch('./data/data.json')
-      .then(function (res) {
-        return res.json()
-      })
-      .then(function (data) {
-        // store Data in State Data Variable
-        setData(data)
-      })
-      .catch(function (err) {
-        console.log(err, ' error')
-      })
+    fetchData(setData)
   }, [])
 
   return (
@@ -30,7 +22,10 @@ function App() {
           <Route exact path="/">
             <Home data={data} />
           </Route>
-          <Route path="/apropos/:idUrl">
+          <Route exact path="/housingsheet/:idUrl">
+            <HousingSheet data={data} />
+          </Route>
+          <Route path="/apropos/">
             <About data={data} />
           </Route>
         </Switch>

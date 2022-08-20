@@ -1,16 +1,11 @@
-import { useParams } from 'react-router-dom'
 import ImageContainer from '../../components/ImageContainer'
+import montainImg from '../../assets/kalen.png'
 
-const About = ({ data }) => {
-  const { idUrl } = useParams()
-  const goodData = data.reduce(
-    (acc, item) => (item.id === idUrl ? (acc = item) : acc),
-    0
-  )
-
+const About = ({}) => {
   return (
     <div className="About">
-      <ImageContainer image={goodData.cover} height="200px" opacity={0} />
+      apropos
+      <ImageContainer image={montainImg} height="200px" opacity={0.3} />
     </div>
   )
 }

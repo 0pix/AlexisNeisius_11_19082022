@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import './Thumbs.css'
 // str = str.replace(/\s+/g, '');
-const Thumbs = ({ image, title }) => {
+const Thumbs = ({ image, title, id }) => {
   return (
-    <Link to="/apropos" className="Thumbs">
+    <Link to={`/apropos/${id}`} className="Thumbs">
       <h3>{title}</h3>
       <div className="Thumbs-black"></div>
       <img src={image} alt={title} />

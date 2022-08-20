@@ -30,8 +30,8 @@ function App() {
           <Route exact path="/">
             <Home data={data} />
           </Route>
-          <Route path="/apropos/:questionNumber">
-            <About />
+          <Route path="/apropos/:idUrl">
+            <About data={data} />
           </Route>
         </Switch>
       </div>

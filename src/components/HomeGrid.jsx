@@ -3,7 +3,7 @@ import './HomeGrid.css'
 const HomeGrid = ({ data }) => {
   return data.map((elm) => (
     <div className="Thumbs">
-      <Thumbs key={elm.id} image={elm.cover} title={elm.title} />
+      <Thumbs id={elm.id} key={elm.id} image={elm.cover} title={elm.title} />
     </div>
   ))
 }

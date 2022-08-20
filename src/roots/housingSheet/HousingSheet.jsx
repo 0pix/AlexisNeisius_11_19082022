@@ -4,13 +4,17 @@ import Slider from '../../components/Slider'
 import './HousingSheet.css'
 const HousingSheet = () => {
   const [data, setData] = useState([])
+  const { idUrl } = useParams()
+  // const { idUrl } = useParams()
+
   useEffect(() => {
-    fetch('./data/data.json')
+    fetch('../data/data.json')
       .then(function (res) {
         return res.json()
       })
       .then(function (data) {
         // store Data in State Data Variable
+        console.log(data)
         setData(data)
       })
       .catch(function (err) {
@@ -18,7 +22,6 @@ const HousingSheet = () => {
       })
   }, [])
 
-  const { idUrl } = useParams()
   const goodData = data.reduce(
     (acc, item) => (item.id === idUrl ? (acc = item) : acc),
     0

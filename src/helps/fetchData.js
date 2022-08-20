@@ -1,17 +1,4 @@
-// const fetchData = (setData) => {
-//   fetch('./data/data.json')
-//     .then(function (res) {
-//       return res.json()
-//     })
-//     .then(function (data) {
-//       // store Data in State Data Variable
-//       setData(data)
-//     })
-//     .catch(function (err) {
-//       console.log(err, ' error')
-//     })
-// }
-const fetchData = (setData) => {
+export const fetchData = (setData) => {
   fetch('./data/data.json')
     .then(function (res) {
       return res.json()
@@ -24,9 +11,11 @@ const fetchData = (setData) => {
       console.log(err, ' error')
     })
 }
-const fetchDataById = (setData, id) => {
+
+export const fetchDataById = (setData, id) => {
   fetch('./data/data.json')
     .then(function (res) {
+      console.log(res)
       return res.json()
     })
     .then(function (data) {
@@ -38,8 +27,6 @@ const fetchDataById = (setData, id) => {
       setData(item)
     })
     .catch(function (err) {
-      console.log(err, ' error')
+      console.log(err)
     })
 }
-
-export default { fetchData, fetchDataById }

@@ -5,6 +5,10 @@ import React, { useState } from 'react'
 
 const Slider = ({ images, height }) => {
   const [current, setCurrent] = useState(0)
+
+  if (!Array.isArray(images) || images.length <= 0) {
+    return null
+  }
   const length = images.length
 
   const nextSlide = () => {
@@ -15,9 +19,6 @@ const Slider = ({ images, height }) => {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
 
-  if (!Array.isArray(images) || images.length <= 0) {
-    return null
-  }
   return (
     // <div style={{ height: height }} className="slider">
     //   <img src={image} alt="" />

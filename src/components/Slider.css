@@ -6,7 +6,6 @@
   overflow: hidden;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: aqua;
 }
 
 .slider img {
@@ -20,18 +19,40 @@
 }
 
 .slider button {
-  margin: 10px;
+  margin: 5px;
   position: absolute;
-  transform: translate(0%, -50%);
+  /* transform: translate(0%, -50%); */
   top: 50%;
+  border: none;
+  background: transparent;
+  background-image: url(../assets/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: aqua; */
+  background-size: 70%;
+  width: 20px;
+  height: 30px;
 }
 
 .left-arrow {
   left: 0;
+  background-color: blue;
+  transform: translate(0%, -50%);
 }
 
 .right-arrow {
   right: 0;
+  transform: translate(0%, -50%) rotate(180deg);
+  background-color: rgb(155, 77, 13);
+}
+
+.slider span {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-weight: 500;
 }
 
 /* .sliderr {

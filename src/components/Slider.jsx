@@ -24,12 +24,9 @@ const Slider = ({ images, height }) => {
     //   <img src={image} alt="" />
     // </div>
     <section style={{ height: height }} className="slider">
-      <button className="left-arrow" onClick={prevSlide}>
-        avant
-      </button>
-      <button className="right-arrow" onClick={nextSlide}>
-        après
-      </button>
+      <button className="left-arrow" onClick={prevSlide}></button>
+      <button className="right-arrow" onClick={nextSlide}></button>
+      <span>{`${current + 1}/${length}`}</span>
       {/* <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} /> */}
       {/* <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} /> */}
       {images.map((slide, index) => {

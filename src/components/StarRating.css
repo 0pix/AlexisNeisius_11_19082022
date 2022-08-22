@@ -5,3 +5,7 @@
 .StarSvgPink {
   fill: #ff6060;
 }
+
+.starContainer {
+  display: flex;
+}

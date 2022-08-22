@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from './roots/home/Home'
-import About from './roots/about/About'
+import Home from './pages/home/Home'
+import About from './pages/about/About'
 import './App.css'
 import { useState, useEffect } from 'react'
 import Header from './components/Header'
-import HousingSheet from './roots/housingSheet/HousingSheet'
 import { fetchData } from './helps/fetchData'
-
+import HousingSheet from './pages/housingSheet/HousingSheet'
+import Error404 from './pages/error404/Error404'
+import Footer from './components/Footer'
 function App() {
   const [data, setData] = useState([])
   useEffect(() => {
@@ -42,11 +43,15 @@ function App() {
           <Route exact path="/housingsheet/:idUrl">
             <HousingSheet data={data} />
           </Route>
-          <Route path="/apropos/">
+          <Route path="/apropos">
             <About data={data} />
+          </Route>
+          <Route path="*">
+            <Error404 />
           </Route>
         </Switch>
       </div>
+      <Footer></Footer>
     </Router>
   )
 }

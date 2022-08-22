@@ -1,8 +1,0 @@
-.Thumbs {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  /* margin-top: 20px; */
-}

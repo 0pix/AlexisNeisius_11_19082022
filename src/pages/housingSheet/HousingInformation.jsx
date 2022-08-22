@@ -2,6 +2,7 @@ import React from 'react'
 import Owner from './Owner'
 import Tag from './Tag'
 import StarRating from './StarRating'
+import DropDownMenu from '../../components/DropDownMenu'
 import './HousingInformation.css'
 
 const HousingInformation = ({ data }) => {
@@ -18,9 +19,18 @@ const HousingInformation = ({ data }) => {
         </div>
       </div>
       <div className="nameRating">
-        {/* <h1>{data.rating}</h1> */}
         <StarRating data={data}></StarRating>
         <Owner data={data}></Owner>
+      </div>
+      <div className="housingMenus">
+        <DropDownMenu title={'Description'}>{data.description}</DropDownMenu>
+        <DropDownMenu title={'Équipements'}>
+          <ul>
+            {data.equipments.map((elm) => {
+              return <li>{elm}</li>
+            })}
+          </ul>
+        </DropDownMenu>
       </div>
     </div>
   )

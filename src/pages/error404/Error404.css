@@ -1,0 +1,27 @@
+.Error404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 93vh;
+  color: #ff6060;
+  text-align: center;
+  padding: 0px 30px;
+}
+
+.Error404 h1 {
+  font-size: 6em;
+}
+
+.Error404 a {
+  color: #ff6060;
+  text-decoration: underline;
+}
+
+.Error404 div {
+  display: flex;
+  flex-direction: column;
+}
+
+.oups {
+  font-weight: 500;
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import './StarRating.css'
-import star from '../assets/star.svg'
 
 const StarRating = ({ data }) => {
   if (data === undefined) {
@@ -34,9 +33,8 @@ const StarRating = ({ data }) => {
   return (
     <div className="starContainer">
       {star.map((elm, index) => {
-        console.log(index + 1)
         return (
-          <div className="StarRating StarSvgPink">
+          <div key={star.toString()} className="StarRating StarSvgPink">
             {index + 1 <= data.rating ? imgStar : imgStarGrey}
           </div>
         )

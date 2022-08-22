@@ -40,3 +40,8 @@
   display: flex;
   /* margin-top: 5px; */
 }
+
+.housingMenus {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Slider from '../../components/Slider'
-import HousingInformation from '../../components/HousingInformation'
+import Slider from '../housingSheet/Slider'
+import HousingInformation from '../housingSheet/HousingInformation'
 import './HousingSheet.css'
 const HousingSheet = ({ data }) => {
   // const [data, setData] = useState([])
@@ -41,7 +41,7 @@ const HousingSheet = ({ data }) => {
   // }
 
   return (
-    <div className="About">
+    <div className="HousingSheet">
       <Slider
         images={goodData ? goodData.pictures : ''}
         height="250px"

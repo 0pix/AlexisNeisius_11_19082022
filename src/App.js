@@ -9,9 +9,8 @@ import { fetchData } from './helps/fetchData'
 
 function App() {
   const [data, setData] = useState([])
-
   useEffect(() => {
-    fetch('../data/data.json')
+    fetch('../data.json')
       .then(function (res) {
         return res.json()
       })
@@ -23,6 +22,14 @@ function App() {
         console.log(err, ' error')
       })
   }, [])
+
+  if (data.length > 0) {
+    console.log(data[0].host.name)
+  }
+
+  // data done after refresh with this
+
+  // no data after refresh with this
 
   return (
     <Router>

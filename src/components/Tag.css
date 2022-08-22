@@ -1,0 +1,10 @@
+.Tag {
+  width: fit-content;
+  color: white;
+  background-color: #ff6060;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-size: 0.6em;
+  margin-right: 15px;
+  margin-top: 10px;
+}

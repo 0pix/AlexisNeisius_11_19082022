@@ -1,11 +1,17 @@
 .aboutContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 992px;
+  max-width: 750px;
 }
 
 .About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 93vh;
 }

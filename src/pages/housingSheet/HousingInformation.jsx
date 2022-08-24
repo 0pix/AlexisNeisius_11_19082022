@@ -26,8 +26,8 @@ const HousingInformation = ({ data }) => {
         <DropDownMenu title={'Description'}>{data.description}</DropDownMenu>
         <DropDownMenu title={'Équipements'}>
           <ul>
-            {data.equipments.map((elm) => {
-              return <li>{elm}</li>
+            {data.equipments.map((elm, index) => {
+              return <li key={elm + '_' + index}>{elm}</li>
             })}
           </ul>
         </DropDownMenu>

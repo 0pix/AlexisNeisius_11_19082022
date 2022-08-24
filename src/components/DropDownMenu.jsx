@@ -3,16 +3,10 @@ import './DropDownMenu.css'
 
 const DropDownMenu = ({ children, title }) => {
   const [buttonState, setButtonState] = useState(false)
-  const openMenu = () => {
-    if (buttonState === false) {
-      setButtonState(true)
-    } else {
-      setButtonState(false)
-    }
-  }
-  // useEffect(() => {}, [])
 
-  // console.log(buttonState)
+  const openMenu = () => {
+    setButtonState(!buttonState)
+  }
 
   return (
     <div className="DropDownMenu">

@@ -34,8 +34,8 @@ const StarRating = ({ data }) => {
     <div className="starContainer">
       {star.map((elm, index) => {
         return (
-          <div key={star.toString()} className="StarRating StarSvgPink">
-            {index + 1 <= data.rating ? imgStar : imgStarGrey}
+          <div key={elm + '/' + index} className="StarRating StarSvgPink">
+            {elm <= data.rating ? imgStar : imgStarGrey}
           </div>
         )
       })}

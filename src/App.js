@@ -22,7 +22,7 @@ function App() {
       .catch(function (err) {
         console.log(err, ' error')
       })
-  }, [])
+  }, [setData])
 
   if (data.length > 0) {
     console.log(data[0].host.name)
@@ -43,7 +43,7 @@ function App() {
           <Route exact path="/housingsheet/:idUrl">
             <HousingSheet data={data} />
           </Route>
-          <Route path="/apropos">
+          <Route exact path="/apropos">
             <About data={data} />
           </Route>
           <Route path="*">

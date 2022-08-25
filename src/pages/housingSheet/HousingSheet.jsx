@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Slider from '../housingSheet/Slider'
-import HousingInformation from '../housingSheet/HousingInformation'
+import Slider from '../../components/housingSheet/Slider'
+import HousingInformation from '../../components/housingSheet/HousingInformation'
 import './HousingSheet.css'
 const HousingSheet = ({ data }) => {
   // const [data, setData] = useState([])

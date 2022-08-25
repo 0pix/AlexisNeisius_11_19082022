@@ -2,7 +2,7 @@ import React from 'react'
 import Owner from './Owner'
 import Tag from './Tag'
 import StarRating from './StarRating'
-import DropDownMenu from '../../components/DropDownMenu'
+import DropDownMenu from '../DropDownMenu'
 import './HousingInformation.css'
 
 const HousingInformation = ({ data }) => {

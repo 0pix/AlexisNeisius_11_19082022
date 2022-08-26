@@ -1,7 +1,5 @@
 import './Slider.css'
 import React, { useState } from 'react'
-// import { SliderData } from './SliderData'
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 
 const Slider = ({ images, height }) => {
   const [current, setCurrent] = useState(0)
@@ -20,15 +18,10 @@ const Slider = ({ images, height }) => {
   }
 
   return (
-    // <div style={{ height: height }} className="slider">
-    //   <img src={image} alt="" />
-    // </div>
-    <section style={{ height: height }} className="slider">
-      <button className="left-arrow" onClick={prevSlide}></button>
-      <button className="right-arrow" onClick={nextSlide}></button>
+    <section style={{ height: height }} className='slider'>
+      <button className='left-arrow' onClick={prevSlide}></button>
+      <button className='right-arrow' onClick={nextSlide}></button>
       <span>{`${current + 1}/${length}`}</span>
-      {/* <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} /> */}
-      {/* <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} /> */}
       {images.map((slide, index) => {
         return (
           <div
@@ -36,7 +29,7 @@ const Slider = ({ images, height }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide} alt="travel" className="image" />
+              <img src={slide} alt='travel' className='image' />
             )}
           </div>
         )

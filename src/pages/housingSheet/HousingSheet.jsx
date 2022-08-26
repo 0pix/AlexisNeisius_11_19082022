@@ -1,44 +1,17 @@
-import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Slider from '../../components/housingSheet/Slider'
 import HousingInformation from '../../components/housingSheet/HousingInformation'
 import './HousingSheet.css'
 const HousingSheet = ({ data }) => {
-  // const [data, setData] = useState([])
   const { idUrl } = useParams()
 
-  // useEffect(() => {
-  //   // fetch('../data.json')
-  //   //   .then(function (res) {
-  //   //     console.log(res)
-  //   //     return res.json()
-  //   //   })
-  //   //   .then(function (data) {
-  //   //     console.log(data)
-  //   //     // store Data in State Data Variable
-  //   //     return setData(data)
-  //   //   })
-  //   //   .catch(function (err) {
-  //   //     console.log(err, ' error')
-  //   //   })
-  //   fetch('../data.json')
-  //     .then((response) => response.json())
-  //     .then((actualData) => setData(actualData))
-  //     .catch(function (err) {
-  //       console.log(err, ' error')
-  //     })
-  // }, [])
 
-  // const goodData = data.reduce(
-  //   (acc, item) => (item.id === idUrl ? (acc = item) : acc),
-  //   null
-  // )
 
   const goodData = data.find((item) => item.id === idUrl)
 
-  // if (goodData === undefined && goodData === null) {
-  //   return
-  // }
+  if (goodData === undefined && goodData === null) {
+      return
+    }
 
   return (
     <div className="HousingSheet">

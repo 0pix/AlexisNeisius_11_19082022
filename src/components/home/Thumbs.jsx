@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import './Thumbs.css'
-// str = str.replace(/\s+/g, '');
 const Thumbs = ({ image, title, id }) => {
   return (
     <Link to={`/housingsheet/${id}`} className="Thumbs">

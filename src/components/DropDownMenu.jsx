@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react'
+import { React, useState } from 'react'
 import './DropDownMenu.css'
 
 const DropDownMenu = ({ children, title }) => {
@@ -9,21 +9,23 @@ const DropDownMenu = ({ children, title }) => {
   }
 
   return (
-    <div className="DropDownMenu">
-      <div className="dropDownMenu-header">
+    <button onClick={openMenu} className='DropDownMenu'>
+      <div className='dropDownMenu-header'>
         <h3>{title}</h3>
-        <button
-          onClick={openMenu}
+        <div
           className={`arrowDropMenu ${
             buttonState ? 'arrowDropMenuRotate' : ''
           }`}
-        ></button>
+        ></div>
       </div>
       {buttonState ? (
-        <div className="dropDownMenu-content">{children}</div>
+        <div className='dropDownMenu-content'>{children}</div>
       ) : null}
-    </div>
+    </button>
   )
 }
 
 export default DropDownMenu
+
+
+

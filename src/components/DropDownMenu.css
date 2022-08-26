@@ -1,9 +1,11 @@
 .DropDownMenu {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 10px 0px;
+  margin: 10px 0;
+  border: none;
 }
 
 .dropDownMenu-header {
@@ -24,10 +26,7 @@
 
 .arrowDropMenu {
   border: none;
-  background: transparent;
-  background-image: url(../assets/arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: transparent url(../assets/arrow.svg) no-repeat center;
   /* background-color: aqua; */
   background-size: 45%;
   width: 20px;

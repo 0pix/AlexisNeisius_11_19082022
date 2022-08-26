@@ -3,49 +3,45 @@ import Home from './pages/home/Home'
 import About from './pages/about/About'
 import './App.css'
 import { useState, useEffect } from 'react'
-import Header from './components/Header'
+import Header from './components/layouts/Header'
 import HousingSheet from './pages/housingSheet/HousingSheet'
 import Error404 from './pages/error404/Error404'
-import Footer from './components/Footer'
+import Footer from './components/layouts/Footer'
+
 function App() {
   const [data, setData] = useState([])
   useEffect(() => {
     fetch('../data.json')
-      .then(function (res) {
+      .then(function(res) {
         return res.json()
       })
-      .then(function (data) {
-        // store Data in State Data Variable
+      .then(function(data) {
         setData(data)
       })
-      .catch(function (err) {
+      .catch(function(err) {
         console.log(err, ' error')
       })
   }, [setData])
 
-  if (data.length > 0) {
-    console.log(data[0].host.name)
-  }
-
-  // data done after refresh with this
-
-  // no data after refresh with this
+  // if (data.length > 0) {
+  //   console.log(data[0].host.name)
+  // }
 
   return (
     <Router>
-      <div className="app">
+      <div className='app'>
         <Header />
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <Home data={data} />
           </Route>
-          <Route exact path="/housingsheet/:idUrl">
+          <Route exact path='/housingsheet/:idUrl'>
             <HousingSheet data={data} />
           </Route>
-          <Route exact path="/apropos">
+          <Route exact path='/apropos'>
             <About data={data} />
           </Route>
-          <Route path="*">
+          <Route path='*'>
             <Error404 />
           </Route>
         </Switch>

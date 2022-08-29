@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 const Slider = ({ images, height }) => {
   const [current, setCurrent] = useState(0)
 
+
   if (!Array.isArray(images) || images.length <= 0) {
     return null
   }
@@ -17,11 +18,19 @@ const Slider = ({ images, height }) => {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
 
-  return (
-    <section style={{ height: height }} className='slider'>
+  let ArrowNumber;
+  if (length > 2){
+    ArrowNumber = <>
       <button className='left-arrow' onClick={prevSlide}></button>
       <button className='right-arrow' onClick={nextSlide}></button>
-      <span>{`${current + 1}/${length}`}</span>
+      <span>{`${current + 1}/${length}`}</span></>
+  } else {
+    ArrowNumber = null
+  }
+
+  return (
+    <section style={{ height: height }} className='slider'>
+       {ArrowNumber}
       {images.map((slide, index) => {
         return (
           <div
@@ -29,7 +38,7 @@ const Slider = ({ images, height }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide} alt='travel' className='image' />
+              <img src={slide} alt='slide-img' className='image' />
             )}
           </div>
         )

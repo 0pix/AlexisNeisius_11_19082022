@@ -2,3 +2,52 @@
   width: 100%;
   height: 93vh;
 }
+
+/*information*/
+.HousingInformation {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: space-between; */
+}
+
+.titleLocat {
+  display: flex;
+  flex-direction: column;
+  color: #ff6060;
+}
+
+.city {
+  margin-top: 5px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.titleLocat h1 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.titleLocat h1 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.nameRating {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tagBloc {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.housingMenus {
+  display: flex;
+  flex-direction: column;
+}
+

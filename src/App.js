@@ -23,9 +23,9 @@ function App() {
       })
   }, [setData])
 
-  // if (data.length > 0) {
-  //   console.log(data[0].host.name)
-  // }
+  if (data.length > 0) {
+    console.log(data[0])
+  }
 
   return (
     <Router>

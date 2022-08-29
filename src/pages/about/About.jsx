@@ -1,6 +1,6 @@
-import ImageContainer from '../../components/ImageContainer'
+import ImageContainer from '../../components/ImageContainer/ImageContainer'
 import montainImg from '../../assets/kalen.png'
-import DropDownMenu from '../../components/DropDownMenu'
+import DropDownMenu from '../../components/DropDownMenu/DropDownMenu'
 
 import './About.css'
 

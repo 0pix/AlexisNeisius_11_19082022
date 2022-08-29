@@ -1,7 +1,7 @@
 import rockimg from '../../assets/rockImg.png'
-import ImageContainer from '../../components/ImageContainer'
-import HomeGrid from '../../components/home/HomeGrid'
+import ImageContainer from '../../components/ImageContainer/ImageContainer'
 import './Home.css'
+import Thumbs from './Thumbs/Thumbs'
 
 const Home = ({ data }) => {
   return (
@@ -13,7 +13,11 @@ const Home = ({ data }) => {
       >
         <h2>Chez vous, partout et ailleurs</h2>
       </ImageContainer>
-      <HomeGrid data={data}></HomeGrid>
+      <div className='HomeGrid'>
+        {data.map((elm) => (
+          <Thumbs id={elm.id} key={elm.id} image={elm.cover} title={elm.title} />
+        ))}
+      </div>
     </div>
   )
 }

@@ -26,7 +26,7 @@
 
 .arrowDropMenu {
   border: none;
-  background: transparent url(../assets/arrow.svg) no-repeat center;
+  background: transparent url(../../assets/arrow.svg) no-repeat center;
   /* background-color: aqua; */
   background-size: 45%;
   width: 20px;

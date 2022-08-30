@@ -6,13 +6,16 @@ import StarRating from '../../components/StartRating/StarRating'
 import Owner from '../../components/Owner/Owner'
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu'
 import React from 'react'
+import Error404 from '../error404/Error404'
 
 const HousingSheet = ({ data }) => {
   const { idUrl } = useParams()
   const goodData = data.find((item) => item.id === idUrl)
 
+
   if (goodData === undefined || goodData === null) {
-    return
+
+    return <Error404/>
   }
 
   return (
